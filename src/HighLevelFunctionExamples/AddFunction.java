@@ -1,4 +1,4 @@
-package FunctionExamples;
+package HighLevelFunctionExamples;
 
 public class AddFunction implements ApplyToNumber {
 

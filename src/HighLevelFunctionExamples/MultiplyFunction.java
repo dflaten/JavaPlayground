@@ -1,6 +1,4 @@
-package FunctionExamples;
-
-import FunctionExamples.ApplyToNumber;
+package HighLevelFunctionExamples;
 
 public class MultiplyFunction implements ApplyToNumber {
 

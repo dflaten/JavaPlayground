@@ -1,38 +1,24 @@
-import FunctionExamples.AddFunction;
-import FunctionExamples.ApplyToNumber;
-import FunctionExamples.MultiplyFunction;
+import HighLevelFunctionExamples.*;
+import PermutationsOfArray.GenerateSubsequences;
+import PermutationsOfArray.PartitionEqualSubsetSum;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Starting Program!");
-        HashMap<String, Integer> newMap = new HashMap<>();
-        newMap.put("One", 1);
-        newMap.put("Two", 2);
-        newMap.put("Three", 3);
-        newMap.put("Four", 4);
-        newMap.forEach((key, value) -> printPair(key, value));
-        ApplyToNumber multFunction = new MultiplyFunction();
-        ApplyToNumber addFunction = new AddFunction();
-        int[] input = {1, 2, 3, 4};
-        int val = 2;
-        System.out.println("----------");
-        System.out.println("Input: " + Arrays.toString(input) + " Val: " + val);
-        System.out.println("Multiply Function Output: " + Arrays.toString(performOperation(input, multFunction, val)));
-        System.out.println("Input: " + Arrays.toString(input) + " Val: " + val);
-        System.out.println("Add Function Output: " + Arrays.toString(performOperation(input, addFunction, val)));
+        //System.out.println("Executing Retry");
+        //UsingHighLevelFunctions.execute();
+        int[] myarray = {1,5,11,5};
+        System.out.println("Can partition array: " + Arrays.toString(myarray));
+        System.out.println("Result: " + PartitionEqualSubsetSum.canPartition(myarray));
+//        int[] smallArray = {3,1,2};
+//        System.out.print("Generate Subsequences: " + Arrays.toString(smallArray));
+//        System.out.println("Result: ");
+//        GenerateSubsequences.generateSubSequences(smallArray).forEach(Main::printArray);
 
     }
-    private static int[] performOperation(int[] numbers, ApplyToNumber function, int val) {
-        int[] results = new int[numbers.length];
-        for (int i = 0; i < numbers.length; i++) {
-          results[i] = function.apply(numbers[i], val);
-       }
-        return results;
-    }
-    private static void printPair(String key, Integer value) {
-       System.out.println("Key: " + key + "Value: " + value);
+    static private void printArray(int[] array) {
+        System.out.println(Arrays.toString(array));
     }
 }
